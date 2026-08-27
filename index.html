@@ -21,16 +21,16 @@
     <p>A creative marketing agency.</p>
     <button>Book a Call</button>
   </section>
-  <section class="work" id="work">
-    <h2>Selected Work</h2>
+<section class="work fade-section" id="work">  
+  <h2>Selected Work</h2>
     <div class="work-grid">
       <div class="work-card">Project One</div>
       <div class="work-card">Project Two</div>
       <div class="work-card">Project Three</div>
     </div>
   </section>
-    <section class="studio" id="studio">
-    <h2>Studio</h2>
+<section class="studio fade-section" id="studio">
+  <h2>Studio</h2>
     <p class="studio-intro">We're a small, focused team building brands that stand out through strategy, design, and disciplined execution.</p>
     <div class="values-grid">
       <div class="value-item">
@@ -47,8 +47,8 @@
       </div>
     </div>
   </section>
-    <section class="services" id="services">
-    <h2>Services</h2>
+<section class="services fade-section" id="services">    
+  <h2>Services</h2>
     <div class="services-grid">
       <div class="service-card">
         <h3>Brand Strategy</h3>
@@ -64,10 +64,23 @@
       </div>
     </div>
   </section>
-    <section class="contact" id="contact">
-    <h2>Let's Work Together</h2>
+<section class="contact fade-section" id="contact">
+  <h2>Let's Work Together</h2>
     <p>Ready to grow your brand? Get in touch.</p>
     <a href="mailto:youremail@example.com" class="contact-btn">Get in Touch</a>
   </section>
+  <script>
+  const sections = document.querySelectorAll('.fade-section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
 </body>
 </html>

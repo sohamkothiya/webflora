@@ -1,3 +1,12 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;

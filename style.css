@@ -318,14 +318,14 @@ body {
     gap: 30px;
   }
 }
-
 .fade-section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: translateY(60px) scale(0.98);
+  transition: opacity 1.1s ease, transform 1.1s ease;
 }
 
 .fade-section.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
+

@@ -72,16 +72,8 @@
     <p>Ready to grow your brand? Get in touch.</p>
     <a href="mailto:youremail@example.com" class="contact-btn">Get in Touch</a>
   </section>
- <script>
-  const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-
+<script>
   gsap.registerPlugin(ScrollTrigger);
-  lenis.on('scroll', ScrollTrigger.update);
 
   document.querySelectorAll('section').forEach((section) => {
     const heading = section.querySelector('h1, h2');
@@ -95,8 +87,8 @@
         ease: "power3.out",
         scrollTrigger: {
           trigger: section,
-          start: "top 75%",
-          toggleActions: "play reverse play reverse"
+          start: "top 85%",
+          toggleActions: "play none none reverse"
         }
       });
     }
@@ -109,8 +101,8 @@
       stagger: 0.15,
       scrollTrigger: {
         trigger: section,
-        start: "top 70%",
-        toggleActions: "play reverse play reverse"
+        start: "top 80%",
+        toggleActions: "play none none reverse"
       }
     });
   });

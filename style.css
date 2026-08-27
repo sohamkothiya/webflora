@@ -209,3 +209,54 @@ body {
   border-radius: 4px;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .work h2,
+  .services h2,
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .work-grid,
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-card {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .service-card {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .contact {
+    padding: 60px 20px;
+  }
+
+}

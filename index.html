@@ -72,20 +72,48 @@
     <p>Ready to grow your brand? Get in touch.</p>
     <a href="mailto:youremail@example.com" class="contact-btn">Get in Touch</a>
   </section>
-  <script>
-  const sections = document.querySelectorAll('.fade-section');
+ <script>
+  const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-            if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
+  gsap.registerPlugin(ScrollTrigger);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  document.querySelectorAll('section').forEach((section) => {
+    const heading = section.querySelector('h1, h2');
+    const rest = section.querySelectorAll('p, button, a, .work-grid, .services-grid, .values-grid');
+
+    if (heading) {
+      gsap.from(heading, {
+        opacity: 0,
+        y: 60,
+        duration: 1.1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    }
+
+    gsap.from(rest, {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 70%",
+        toggleActions: "play reverse play reverse"
       }
     });
-  }, { threshold: 0.3 });
-
-  sections.forEach(section => observer.observe(section));
+  });
 </script>
 </body>
 </html>

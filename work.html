@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookie Policy — Webflora</title>
+  <title>Our Work — Webflora</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
       <ul class="nav-links">
         <li><a href="services.html">Services</a></li>
         <li><a href="industries.html">Industries</a></li>
-        <li><a href="work.html">Our Work</a></li>
+        <li><a href="work.html" class="active">Our Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resources.html">Insights</a></li>
       </ul>
@@ -23,17 +23,22 @@
   </nav>
 
   <header class="page-header">
-    <h1>Cookie Policy</h1>
-    <p>Placeholder content — update with your real cookie policy.</p>
+    <h1>Our Work</h1>
+    <p>A look at the brands we've helped grow.</p>
   </header>
 
-  <section class="text-section">
-    <div class="text-inner">
-      <h2>Overview</h2>
-      <p>This is placeholder text for Webflora's cookie policy. Replace this section with details on what cookies your site uses and why.</p>
+  <section class="item-grid">
+    <div class="item-card"><h3>Case Studies</h3><p>In-depth breakdowns of strategy, execution, and results.</p></div>
+    <div class="item-card"><h3>Portfolio</h3><p>A visual showcase of campaigns and creative work.</p></div>
+    <div class="item-card"><h3>Results</h3><p>Real numbers from real campaigns we've run.</p></div>
+  </section>
 
-      <h2>Contact</h2>
-      <p>For questions about cookies, contact scalewithsamzx@gmail.com.</p>
+  <section class="work fade-section" id="featured-work">
+    <h2>Featured Projects</h2>
+    <div class="work-grid">
+      <div class="work-card">Brand Launch — TechNova</div>
+      <div class="work-card">Social Campaign — Bloom & Co</div>
+      <div class="work-card">Website Redesign — Aria Living</div>
     </div>
   </section>
 
@@ -79,6 +84,16 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

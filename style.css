@@ -258,3 +258,832 @@ body {
 
   .studio {
     padding: 60px 20px;
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #151515;
+  color: #EDEBE6;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #EDEBE6;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #EDEBE6;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #9FB8C7;
+}
+
+.nav-cta {
+  background-color: #9FB8C7;
+  color: #151515;
+  padding: 9px 20px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  background-color: #8AA7B8;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+  margin: 0 0 20px;
+  max-width: 800px;
+  line-height: 1.15;
+}
+
+.hero .hero-sub {
+  max-width: 620px;
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero button,
+.btn-primary {
+  padding: 12px 28px;
+  background-color: #9FB8C7;
+  color: #151515;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  padding: 12px 28px;
+  background: transparent;
+  color: #EDEBE6;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- Trust bar ---------- */
+.trust-bar {
+  background-color: #101010;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.trust-bar p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  color: #555;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ---------- What We Do ---------- */
+.whatwedo {
+  background-color: #151515;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.whatwedo h2 {
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+.whatwedo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.whatwedo-item {
+  max-width: 260px;
+  text-align: left;
+}
+
+.whatwedo-item h3 {
+  color: #9FB8C7;
+  margin-bottom: 10px;
+}
+
+.whatwedo-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cfcfcf;
+}
+
+/* ---------- Work ---------- */
+.work {
+  background-color: #F3F1EC;
+  color: #1A1A1A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.work h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.work-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 60px 40px;
+  min-width: 250px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* ---------- Studio / Why Webflora ---------- */
+.studio {
+  background-color: #F3F1EC;
+  color: #1A1A1A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.studio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.studio-intro {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.value-item {
+  max-width: 220px;
+}
+
+.value-item h3 {
+  color: #4E6673;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.value-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ---------- Services (home teaser) ---------- */
+.services {
+  background-color: #151515;
+  color: #EDEBE6;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  max-width: 280px;
+  text-align: left;
+}
+
+.service-card h3 {
+  color: #9FB8C7;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cfcfcf;
+}
+
+/* ---------- Process ---------- */
+.process {
+  background-color: #F3F1EC;
+  color: #1A1A1A;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  max-width: 220px;
+  text-align: left;
+}
+
+.process-step .step-number {
+  color: #4E6673;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.process-step h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.process-step p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ---------- Industries teaser ---------- */
+.industries-teaser {
+  background-color: #151515;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.industries-teaser h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.industries-teaser p {
+  color: #cfcfcf;
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+.industry-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.industry-pill {
+  border: 1px solid #333;
+  color: #cfcfcf;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials {
+  background-color: #F3F1EC;
+  color: #1A1A1A;
+  padding: 90px 40px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 30px;
+  max-width: 280px;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.testimonial-card .testimonial-name {
+  font-weight: 600;
+  color: #1A1A1A;
+  font-size: 0.9rem;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background-color: #151515;
+  padding: 90px 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #2a2a2a;
+  padding: 20px 0;
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  color: #EDEBE6;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* ---------- Final CTA ---------- */
+.contact {
+  background-color: #F3F1EC;
+  color: #1A1A1A;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #9FB8C7;
+  color: #151515;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* ---------- Fade-in scroll animation ---------- */
+.fade-section {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition: opacity 1.1s ease, transform 1.1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- Shared page header (inner pages) ---------- */
+.page-header {
+  background-color: #151515;
+  color: #EDEBE6;
+  padding: 120px 40px 60px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin: 0 0 12px;
+}
+
+.page-header p {
+  color: #cfcfcf;
+  font-size: 1rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ---------- Generic card grid ---------- */
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 60px 40px 90px;
+  background-color: #F3F1EC;
+}
+
+.item-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 30px;
+  max-width: 280px;
+  flex: 1 1 240px;
+  text-align: left;
+}
+
+.item-card h3 {
+  color: #4E6673;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.item-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- Service category groups ---------- */
+.service-category {
+  background-color: #F3F1EC;
+  padding: 50px 40px 10px;
+  text-align: center;
+}
+
+.service-category h2 {
+  color: #1A1A1A;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.service-category .category-label {
+  color: #4E6673;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ---------- Pricing tiers ---------- */
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 60px 40px 40px;
+  background-color: #F3F1EC;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 36px 28px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  text-align: left;
+}
+
+.pricing-card h3 {
+  color: #1A1A1A;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.pricing-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.pricing-cta {
+  text-align: center;
+  background-color: #F3F1EC;
+  padding: 0 40px 90px;
+}
+
+.pricing-cta p {
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  margin-bottom: 24px;
+}
+
+/* ---------- Simple text section (About, Legal) ---------- */
+.text-section {
+  background-color: #151515;
+  color: #EDEBE6;
+  padding: 60px 40px 100px;
+}
+
+.text-section .text-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.text-section h2 {
+  color: #9FB8C7;
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.text-section h2:first-child {
+  margin-top: 0;
+}
+
+.text-section p {
+  line-height: 1.7;
+  color: #cfcfcf;
+  font-size: 0.98rem;
+}
+
+.text-section .statement {
+  font-size: 1.3rem;
+  color: #EDEBE6;
+  line-height: 1.6;
+  border-left: 3px solid #9FB8C7;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+/* ---------- Contact form fields (static, mailto-based) ---------- */
+.contact-form-note {
+  background-color: #151515;
+  padding: 20px 40px 80px;
+  text-align: center;
+}
+
+.contact-form-note .field-list {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  text-align: left;
+  color: #b8b8b8;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #101010;
+  color: #EDEBE6;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 60px 40px 30px;
+  border-bottom: 1px solid #232323;
+}
+
+.footer-col {
+  min-width: 150px;
+  flex: 1 1 150px;
+}
+
+.footer-col h4 {
+  color: #EDEBE6;
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p {
+  color: #9c9c9c;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-col a {
+  display: block;
+  color: #9c9c9c;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #9FB8C7;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  font-size: 0.8rem;
+  color: #777;
+  flex-wrap: wrap;
+}
+
+.footer-bottom a {
+  color: #777;
+}
+
+.footer-bottom a:hover {
+  color: #9FB8C7;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero .hero-sub {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .work h2,
+  .services h2,
+  .contact h2,
+  .studio h2,
+  .page-header h1,
+  .whatwedo h2,
+  .process h2,
+  .industries-teaser h2,
+  .testimonials h2,
+  .faq h2 {
+    font-size: 1.8rem;
+  }
+
+  .work-grid,
+  .services-grid,
+  .whatwedo-grid,
+  .process-steps,
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-card {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .service-card,
+  .whatwedo-item,
+  .process-step,
+  .testimonial-card {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .studio {
+    padding: 60px 20px;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .page-header {
+    padding: 90px 20px 40px;
+  }
+
+  .item-grid,
+  .pricing-grid {
+    padding: 40px 20px 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-card,
+  .pricing-card {
+    max-width: 90%;
+  }
+
+  .text-section {
+    padding: 40px 20px 60px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 20px 20px;
+  }
+
+  .trust-logos {
+    gap: 20px;
+  }
+}

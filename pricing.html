@@ -27,7 +27,7 @@
     <p>Every business needs a different growth system.</p>
   </header>
 
-  <section class="pricing-grid">
+  <section class="pricing-grid fade-section">
     <div class="pricing-card">
       <h3>Starter Growth</h3>
       <p>For businesses starting to invest seriously in marketing.</p>
@@ -46,7 +46,7 @@
     </div>
   </section>
 
-  <section class="pricing-cta">
+  <section class="pricing-cta fade-section">
     <p>Get a Custom Proposal →</p>
     <a href="mailto:scalewithsamzx@gmail.com" class="contact-btn">Get a Custom Proposal</a>
   </section>
@@ -93,6 +93,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

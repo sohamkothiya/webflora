@@ -27,7 +27,7 @@
     <p>Who we are, how we work, and why brands choose us.</p>
   </header>
 
-  <section class="text-section">
+  <section class="text-section fade-section">
     <div class="text-inner">
       <h2>Who We Are</h2>
       <p>Webflora is a creative marketing agency helping ambitious businesses attract customers, build brands, and grow revenue.</p>
@@ -93,6 +93,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

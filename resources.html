@@ -27,7 +27,7 @@
     <p>Guides, insights, and answers to help you grow.</p>
   </header>
 
-  <section class="item-grid">
+  <section class="item-grid fade-section">
     <div class="item-card"><h3>Blog</h3><p>Articles on marketing, branding, and growth.</p></div>
     <div class="item-card"><h3>Marketing Guides</h3><p>Practical, step-by-step guides for common marketing goals.</p></div>
     <div class="item-card"><h3>Industry Insights</h3><p>Trends and data shaping the industries we work in.</p></div>
@@ -77,6 +77,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

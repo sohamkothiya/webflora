@@ -27,7 +27,7 @@
     <p>Placeholder content — update with your real terms.</p>
   </header>
 
-  <section class="text-section">
+  <section class="text-section fade-section">
     <div class="text-inner">
       <h2>Overview</h2>
       <p>This is placeholder text for Webflora's terms and conditions. Replace this section with the terms that govern use of your site and services.</p>
@@ -82,6 +82,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

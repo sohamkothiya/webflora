@@ -27,13 +27,13 @@
     <p>Tell us about your brand and what you're looking to achieve.</p>
   </header>
 
-  <section class="item-grid">
+  <section class="item-grid fade-section">
     <div class="item-card"><h3>Start a Project</h3><p>Tell us about your brand and what you're looking to achieve.</p></div>
     <div class="item-card"><h3>Get a Free Consultation</h3><p>Book a free call to discuss your goals and get a plan.</p></div>
     <div class="item-card"><h3>WhatsApp / Direct Contact</h3><p>Prefer a quick message? Reach us directly.</p></div>
   </section>
 
-  <section class="contact-form-note">
+  <section class="contact-form-note fade-section">
     <div class="field-list">
       Name<br>
       Company<br>
@@ -47,7 +47,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact fade-section">
     <h2>Let's Grow Together</h2>
     <p>Email us the details above and we'll get back to you shortly.</p>
     <a href="mailto:scalewithsamzx@gmail.com" class="contact-btn">Let's Grow Together ↗</a>
@@ -95,6 +95,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

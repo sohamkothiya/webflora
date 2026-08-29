@@ -27,7 +27,7 @@
     <p>Different industries. One growth mindset.</p>
   </header>
 
-  <section class="item-grid">
+  <section class="item-grid fade-section">
     <div class="item-card"><h3>E-commerce & D2C</h3><p>Growth strategies built for online-first brands.</p></div>
     <div class="item-card"><h3>Real Estate</h3><p>Lead generation and branding for developers and agents.</p></div>
     <div class="item-card"><h3>Education</h3><p>Enrollment-focused marketing for schools and courses.</p></div>
@@ -86,6 +86,17 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>

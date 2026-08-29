@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights — Webflora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Webflora</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html" class="active">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Let's Talk ↗</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Insights</h1>
+    <p>Guides, insights, and answers to help you grow.</p>
+  </header>
+
+  <section class="item-grid fade-section">
+    <div class="item-card"><h3>Blog</h3><p>Articles on marketing, branding, and growth.</p></div>
+    <div class="item-card"><h3>Marketing Guides</h3><p>Practical, step-by-step guides for common marketing goals.</p></div>
+    <div class="item-card"><h3>Industry Insights</h3><p>Trends and data shaping the industries we work in.</p></div>
+    <div class="item-card"><h3>Case Studies</h3><p>In-depth breakdowns of strategy, execution, and results.</p></div>
+    <div class="item-card"><h3>FAQs</h3><p>Answers to the questions we hear most often.</p></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Webflora</h4>
+        <p>Marketing that makes businesses grow.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Digital Marketing</a>
+        <a href="services.html">Performance Marketing</a>
+        <a href="services.html">Social Media</a>
+        <a href="services.html">SEO</a>
+        <a href="services.html">Creative</a>
+        <a href="services.html">Web</a>
+        <a href="services.html">AI & Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work.html">Our Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Blog</a>
+        <a href="resources.html">Guides</a>
+        <a href="resources.html">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:scalewithsamzx@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Webflora</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+    </div>
+  </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

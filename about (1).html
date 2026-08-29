@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Webflora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Webflora</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="resources.html">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Let's Talk ↗</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>About Webflora</h1>
+    <p>Who we are, how we work, and why brands choose us.</p>
+  </header>
+
+  <section class="text-section fade-section">
+    <div class="text-inner">
+      <h2>Who We Are</h2>
+      <p>Webflora is a creative marketing agency helping ambitious businesses attract customers, build brands, and grow revenue.</p>
+
+      <h2>What We Believe</h2>
+      <p>Great marketing sits at the intersection of strategy, creativity, and data — not one alone.</p>
+
+      <h2>How We Work</h2>
+      <p>We simplify before we design, build every campaign around clear goals, and stay close to the numbers throughout.</p>
+
+      <h2>Our Philosophy</h2>
+      <p>Consistency compounds. We'd rather build something that works for years than chase a short-term spike.</p>
+
+      <h2>Our Team</h2>
+      <p>A small, focused team of strategists, designers, and marketers working closely with every client.</p>
+
+      <h2>Why Webflora</h2>
+      <p>We combine creative craft with performance data, so every campaign looks great and delivers results.</p>
+
+      <p class="statement">We don't believe in marketing for the sake of marketing. We build strategies designed to create measurable business growth.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Webflora</h4>
+        <p>Marketing that makes businesses grow.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Digital Marketing</a>
+        <a href="services.html">Performance Marketing</a>
+        <a href="services.html">Social Media</a>
+        <a href="services.html">SEO</a>
+        <a href="services.html">Creative</a>
+        <a href="services.html">Web</a>
+        <a href="services.html">AI & Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work.html">Our Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Blog</a>
+        <a href="resources.html">Guides</a>
+        <a href="resources.html">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:scalewithsamzx@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Webflora</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+    </div>
+  </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

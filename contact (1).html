@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Project — Webflora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Webflora</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta active">Let's Talk ↗</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Start a Project</h1>
+    <p>Tell us about your brand and what you're looking to achieve.</p>
+  </header>
+
+  <section class="item-grid fade-section">
+    <div class="item-card"><h3>Start a Project</h3><p>Tell us about your brand and what you're looking to achieve.</p></div>
+    <div class="item-card"><h3>Get a Free Consultation</h3><p>Book a free call to discuss your goals and get a plan.</p></div>
+    <div class="item-card"><h3>WhatsApp / Direct Contact</h3><p>Prefer a quick message? Reach us directly.</p></div>
+  </section>
+
+  <section class="contact-form-note fade-section">
+    <div class="field-list">
+      Name<br>
+      Company<br>
+      Email<br>
+      Phone / WhatsApp<br>
+      Website<br>
+      Industry<br>
+      What do you need help with?<br>
+      Monthly Marketing Budget<br>
+      Tell us about your project
+    </div>
+  </section>
+
+  <section class="contact fade-section">
+    <h2>Let's Grow Together</h2>
+    <p>Email us the details above and we'll get back to you shortly.</p>
+    <a href="mailto:scalewithsamzx@gmail.com" class="contact-btn">Let's Grow Together ↗</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Webflora</h4>
+        <p>Marketing that makes businesses grow.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Digital Marketing</a>
+        <a href="services.html">Performance Marketing</a>
+        <a href="services.html">Social Media</a>
+        <a href="services.html">SEO</a>
+        <a href="services.html">Creative</a>
+        <a href="services.html">Web</a>
+        <a href="services.html">AI & Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work.html">Our Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Blog</a>
+        <a href="resources.html">Guides</a>
+        <a href="resources.html">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:scalewithsamzx@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Webflora</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+    </div>
+  </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

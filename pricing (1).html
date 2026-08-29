@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Webflora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Webflora</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Let's Talk ↗</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Pricing</h1>
+    <p>Every business needs a different growth system.</p>
+  </header>
+
+  <section class="pricing-grid fade-section">
+    <div class="pricing-card">
+      <h3>Starter Growth</h3>
+      <p>For businesses starting to invest seriously in marketing.</p>
+    </div>
+    <div class="pricing-card">
+      <h3>Performance Growth</h3>
+      <p>For businesses ready to scale paid acquisition and results.</p>
+    </div>
+    <div class="pricing-card">
+      <h3>Full-Service Growth</h3>
+      <p>End-to-end strategy, creative, and performance marketing.</p>
+    </div>
+    <div class="pricing-card">
+      <h3>Custom Strategy</h3>
+      <p>A tailored plan built entirely around your goals.</p>
+    </div>
+  </section>
+
+  <section class="pricing-cta fade-section">
+    <p>Get a Custom Proposal →</p>
+    <a href="mailto:scalewithsamzx@gmail.com" class="contact-btn">Get a Custom Proposal</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Webflora</h4>
+        <p>Marketing that makes businesses grow.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Digital Marketing</a>
+        <a href="services.html">Performance Marketing</a>
+        <a href="services.html">Social Media</a>
+        <a href="services.html">SEO</a>
+        <a href="services.html">Creative</a>
+        <a href="services.html">Web</a>
+        <a href="services.html">AI & Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work.html">Our Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Blog</a>
+        <a href="resources.html">Guides</a>
+        <a href="resources.html">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:scalewithsamzx@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Webflora</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+    </div>
+  </footer>
+
+
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

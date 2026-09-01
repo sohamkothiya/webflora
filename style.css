@@ -66,7 +66,7 @@ a { text-decoration: none; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1135,7 +1135,7 @@ html {
 /* ---------- Hero scroll cue (bouncing chevron) ---------- */
 .scroll-cue {
   position: absolute;
-  bottom: 28px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   color: #9FB8C7;

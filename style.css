@@ -66,13 +66,17 @@ a { text-decoration: none; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 100vh;
+  min-height: 78vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px 40px;
+}
+
+.hero-content {
+  margin: auto 0;
 }
 
 .hero h1 {
@@ -1135,7 +1139,6 @@ html {
 /* ---------- Hero scroll cue (bouncing chevron) ---------- */
 .scroll-cue {
   position: relative;
-  margin-top: 60px;
   color: #9FB8C7;
   z-index: 1;
   animation: scrollBounce 2s infinite;

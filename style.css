@@ -66,17 +66,18 @@ a { text-decoration: none; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 78vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 70px 20px 40px;
+  padding: 50px 20px 30px;
+  gap: 40px;
 }
 
 .hero-content {
-  margin: auto 0;
+  margin: 0;
 }
 
 .hero h1 {

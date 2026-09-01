@@ -1031,3 +1031,173 @@ a { text-decoration: none; }
     background-size: 20px 20px;
   }
 }
+
+/* ============================================================
+   PAGE-TURN TRANSITION + ENGAGEMENT ELEMENTS
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Page-turn curtain transition ---------- */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: #9FB8C7;
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.page-transition-overlay.pt-reveal {
+  transition: transform 0.55s cubic-bezier(.77,0,.18,1);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.page-transition-overlay.pt-cover {
+  transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---------- Card hover: lift + page-corner fold ---------- */
+.item-card,
+.work-card,
+.pricing-card,
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.item-card::after,
+.work-card::after,
+.pricing-card::after,
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #e4e4e4 transparent transparent;
+  transition: border-width 0.3s ease;
+}
+
+.item-card:hover,
+.work-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+}
+
+.item-card:hover::after,
+.work-card:hover::after,
+.pricing-card:hover::after,
+.testimonial-card:hover::after {
+  border-width: 0 30px 30px 0;
+  border-color: transparent #9FB8C7 transparent transparent;
+}
+
+.service-card {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card:hover .icon-badge,
+.whatwedo-item:hover .icon-badge {
+  background-color: #9FB8C7;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover .icon-badge svg,
+.whatwedo-item:hover .icon-badge svg {
+  stroke: #151515;
+}
+
+.whatwedo-item {
+  transition: transform 0.3s ease;
+}
+
+.whatwedo-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- Hero scroll cue (bouncing chevron) ---------- */
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #9FB8C7;
+  z-index: 1;
+  animation: scrollBounce 2s infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.scroll-cue span {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.scroll-cue svg {
+  width: 20px;
+  height: 20px;
+  stroke: #9FB8C7;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ---------- Page header decorative dot-grid + accent ---------- */
+.page-header {
+  position: relative;
+  background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center top;
+}
+
+/* ---------- Category icon badges (services.html) ---------- */
+.service-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-category .icon-badge {
+  border-color: #4E6673;
+  margin-bottom: 10px;
+}
+
+.service-category .icon-badge svg {
+  stroke: #4E6673;
+}
+
+/* ---------- Reduce motion for accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-overlay,
+  .page-transition-overlay.pt-reveal,
+  .page-transition-overlay.pt-cover,
+  .scroll-cue {
+    transition: none !important;
+    animation: none !important;
+  }
+}

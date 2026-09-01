@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-transition-overlay"></div>
 
   <nav class="navbar">
     <div class="logo">Webflora</div>
@@ -23,9 +24,16 @@
   </nav>
 
   <header class="page-header">
+    <span class="section-accent"></span>
     <h1>Industries</h1>
     <p>Different industries. One growth mindset.</p>
   </header>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C300,0 900,60 1200,30 L1200,60 L0,60 Z" fill="#F3F1EC"/>
+    </svg>
+  </div>
 
   <section class="item-grid fade-section">
     <div class="item-card"><h3>E-commerce & D2C</h3><p>Growth strategies built for online-first brands.</p></div>
@@ -96,6 +104,28 @@
       });
     }, { threshold: 0.15 });
     sections.forEach(section => observer.observe(section));
+  </script>
+
+
+  <script>
+    (function () {
+      const overlay = document.querySelector(".page-transition-overlay");
+      if (!overlay) return;
+      window.addEventListener("DOMContentLoaded", () => {
+        requestAnimationFrame(() => overlay.classList.add("pt-reveal"));
+      });
+      document.querySelectorAll("a[href$=\".html\"]").forEach(link => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("http") || this.target === "_blank") return;
+          e.preventDefault();
+          overlay.classList.remove("pt-reveal");
+          void overlay.offsetWidth;
+          overlay.classList.add("pt-cover");
+          setTimeout(() => { window.location.href = href; }, 420);
+        });
+      });
+    })();
   </script>
 
 </body>

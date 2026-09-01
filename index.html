@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-transition-overlay"></div>
 
   <nav class="navbar">
     <div class="logo">Webflora</div>
@@ -31,6 +32,10 @@
       <a href="contact.html" class="btn-primary">Start a Project ↗</a>
       <a href="work.html" class="btn-secondary">Explore Our Work →</a>
     </div>
+    <a href="#whatwedo" class="scroll-cue" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
   </section>
 
   <section class="trust-bar">
@@ -304,6 +309,28 @@
     }, { threshold: 0.15 });
 
     sections.forEach(section => observer.observe(section));
+  </script>
+
+
+  <script>
+    (function () {
+      const overlay = document.querySelector(".page-transition-overlay");
+      if (!overlay) return;
+      window.addEventListener("DOMContentLoaded", () => {
+        requestAnimationFrame(() => overlay.classList.add("pt-reveal"));
+      });
+      document.querySelectorAll("a[href$=\".html\"]").forEach(link => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("http") || this.target === "_blank") return;
+          e.preventDefault();
+          overlay.classList.remove("pt-reveal");
+          void overlay.offsetWidth;
+          overlay.classList.add("pt-cover");
+          setTimeout(() => { window.location.href = href; }, 420);
+        });
+      });
+    })();
   </script>
 
 </body>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-transition-overlay"></div>
 
   <nav class="navbar">
     <div class="logo">Webflora</div>
@@ -23,6 +24,7 @@
   </nav>
 
   <header class="page-header">
+    <span class="section-accent"></span>
     <h1>Terms & Conditions</h1>
     <p>Placeholder content — update with your real terms.</p>
   </header>
@@ -92,6 +94,28 @@
       });
     }, { threshold: 0.15 });
     sections.forEach(section => observer.observe(section));
+  </script>
+
+
+  <script>
+    (function () {
+      const overlay = document.querySelector(".page-transition-overlay");
+      if (!overlay) return;
+      window.addEventListener("DOMContentLoaded", () => {
+        requestAnimationFrame(() => overlay.classList.add("pt-reveal"));
+      });
+      document.querySelectorAll("a[href$=\".html\"]").forEach(link => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("http") || this.target === "_blank") return;
+          e.preventDefault();
+          overlay.classList.remove("pt-reveal");
+          void overlay.offsetWidth;
+          overlay.classList.add("pt-cover");
+          setTimeout(() => { window.location.href = href; }, 420);
+        });
+      });
+    })();
   </script>
 
 </body>

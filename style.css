@@ -1134,10 +1134,8 @@ html {
 
 /* ---------- Hero scroll cue (bouncing chevron) ---------- */
 .scroll-cue {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin-top: 60px;
   color: #9FB8C7;
   z-index: 1;
   animation: scrollBounce 2s infinite;
@@ -1163,8 +1161,8 @@ html {
 }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
 /* ---------- Page header decorative dot-grid + accent ---------- */
